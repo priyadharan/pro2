@@ -1,0 +1,43 @@
+{% extends 'body.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>
+        <h1>register</h1>
+    {% endblock %}
+    </title>
+</head>
+<body>
+    {% block body %}
+    <div class="register">
+    <h2>REGISTER PAGE</h2>
+    <form method="post" action="/register">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+        </div>
+        <div class="form-group">
+            <label for="password">confirm Password:</label>
+            <input type="password" id="password" name="password" required><br>
+        </div>
+       
+       
+        
+        <div class="button">
+        <button type="submit">Register</button>
+        </div>
+    </form>
+    <h3>Already have an account? <a href="/login">Login here</a>.</h3>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends'body.html' %}
+{% block body %}
+<center><h1>USER TABLE</h1></center>
+<table class='table table-bordered'>
+    <thead>
+        <th>SNO</th>
+        <th>NAME</th>
+        <th>PASSWORD</th>
+    </thead>
+    <tbody>
+        {% for row in datas %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{row.USERNAME}}</td>
+            <td>{{row.PASSWORD}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+{% endblock %}
